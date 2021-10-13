@@ -9,4 +9,9 @@ urlpatterns = [
     path('signin', LoginView.as_view(template_name='signin.html'),name='signin'),
     path('signout', LogoutView.as_view(template_name='signout.html'),name='signout'),
 
+    path('setcookies', views.setcookies, name='setcookies'),    
+    path('getcookies', views.getcookies, name='getcookies'),
+    path('deletecookies', views.deletecookies, name='deletecookies'),
+
+
 ]

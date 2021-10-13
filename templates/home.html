@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
  <div class="card-body">
-    <h5 class="card-title">Plz Login to see the Cookies</h5>
-    <p class="card-text">After login, the page will show login times</p>
-    <a href="#" class="btn btn-primary">Login</a>
+
+   {% if user.is_authenticated %}
+   <h5 class="card-title">You are loggedin as {{user.username}}</h5>
+    <!-- 
+    <p class="card-text">Press <a href="getcookies" style="color: blue; font-weight:bold;">here</a> to see cookies</p>
+  -->
+    <br>
+    <p class="card-text" >You have visited this page for <b>{{value}} </b> times</p>
+
+   {% else %}
+    <h5 class="card-title">You are not loggedin</h5>
+    <p class="card-text">During login, the cookies will automatically set</p>
+    {% endif %}
 </div>
 {% endblock content %}

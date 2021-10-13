@@ -23,8 +23,21 @@
       {% if user.is_authenticated %}
 
       <li class="nav-item">
+        <a class="nav-link ">Hello {{user.username}}</a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link " href="signout">SignOut</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="getcookies">Get Cookies</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="deletecookies">Delete Cookies</a>
+      </li>
+
       {% else %}
       <li class="nav-item ">
         <a class="nav-link" href="/signup">SignUp</a>
